@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section.menu{
+    display: flex; /*flex*/
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s;
+}
+button.choice{
+    width: 60vh;
+    height: 20vh;
+    font-size: 7vh;
+    color: orangered;
+    background-color: black;
+    margin: 10px;
+    border: 0;
+    text-transform: uppercase;
+    
+}
+div.rule{
+    position: fixed;
+    bottom: -20vh;
+    font-size: 2.5vh;
+    color: orangered;
+    width: 80vh;
+    transition: 0.5s;
+}
+button.numbers:hover~div.show1{
+    bottom: 2vh;
+}
+button.personal:hover~div.show2{
+    bottom: 2vh;
+}
+.topAniamtion{
+    transform: translate(0,-100%);
+}
+.belowAnimation{
+    transform: translate(0,600%);
+}

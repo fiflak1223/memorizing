@@ -1,0 +1,79 @@
+:root{
+    --fontSize: 5vh;
+}
+section.gameOneMenu{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(-100%,0);
+    transition: 2s;
+}
+section.animation{
+    transform: translate(0,0);
+}
+section.gameOneMenu button.play, button.check,button.again{
+    background-color: black;
+    text-transform: uppercase;
+    color: orangered;
+    font-size: var(--fontSize);
+    margin-top: 2vh;
+}
+section.gameOneMenu div div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fontSize);
+    color: orangered;
+    text-transform: uppercase;
+    margin-top: 2vh;
+}
+section.gameOneMenu div input{
+    width: 40px;
+    display: block;
+    margin: 0 auto;
+}
+section.gameOne{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section.gameOne div.emergingNumber{
+    color :orangered;
+    font-size: 15vh;
+    opacity: 0;
+}
+@keyframes emerge{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes disappear{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+input.numberArray,button.check,button.again{
+    display: none;
+}
+input.numberArray[type="text"]{
+    height: var(--fontSize);
+    width: 40vh;
+    font-size: var(--fontSize);
+}
+div.result, div.isCorrect{
+    font-size: var(--fontSize);
+    color :orangered;
+    display: none;
+}
